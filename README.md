@@ -11,7 +11,7 @@ Concretely, one can take the pure text and translate each character to its corre
 
 | **Example**|
 |-|
-|Given the text `I am a beautiful green tree.` and password `dog` then their corresponding ASCII codes would be `[73, 32, 97, 109, 32, 97, 32, 98, 101, 97, 117, 116, 105, 102, 117, 108, 32, 103, 114, 101, 101, 110, 32, 116, 114, 101, 101, 46]` and `[100, 111, 103]`. Thus, the encrypted message would be `[73 XOR 100, 32 XOR 111, 97 XOR 103, 109 XOR 100 ...]` which would be equal to `[45, 79, 6, 9, 79, 6, 68, 13, 2, 5, 26, 19, 13, 9, 18, 8, 79, 0, 22, 10, 2, 10, 79, 19, 22, 10, 2, 74]`. Thus getting the latter ASCII codes and applying the XOR function along with `[100, 111, 103]` (the keys corresponding ASCII codes), would give us the initial message |
+|Given the text `I am a beautiful green tree.` and password `dog` then their corresponding ASCII codes would be `[73, 32, 97, 109, 32, 97, 32, 98, 101, 97, 117, 116, 105, 102, 117, 108, 32, 103, 114, 101, 101, 110, 32, 116, 114, 101, 101, 46]` and `[100, 111, 103]`. Thus, the encrypted message would be `[73 XOR 100, 32 XOR 111, 97 XOR 103, 109 XOR 100 ...]` which would be equal to `[45, 79, 6, 9, ...]`. Thus getting the latter ASCII codes and applying the XOR function along with `[100, 111, 103]` (the key's corresponding ASCII codes), would give us the initial message. |
 
 Remarks:
 - In python3, one can convert a character `c` into ASCII by using the function `ord(c)`.
