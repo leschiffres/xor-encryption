@@ -9,7 +9,7 @@ keys = [''.join(i) for i in itertools.product(alphabet, repeat = password_length
 
 print(f'There are {len(keys)} possible keys of size {password_length}.')
 
-filename = './encrypted-message.txt'
+filename = './data/encrypted-message.txt'
 with open(filename, 'r') as f:
     data = [int(n) for n in f.readlines()[0].split(',')]
 

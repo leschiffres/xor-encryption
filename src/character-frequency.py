@@ -2,7 +2,7 @@ from nltk.corpus import words
 import itertools
 import time
 
-filename = 'encrypted-message.txt'
+filename = './data/encrypted-message.txt'
 with open(filename, 'r') as f:
     data = [int(n) for n in f.readlines()[0].split(',')]
 print(f'Characters in the encrypted message: {len(data)}')
