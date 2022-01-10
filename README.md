@@ -5,6 +5,7 @@ This algorithm is inspired by this [Project Euler Problem](https://projecteuler.
 
 ## Encryption Method
 
+See the example: [baseline-algorithm.py](./baseline-algorithm.py)
 The idea is that to decrypt/encrypt message one can use the **XOR** function along with a **key / password**. The reason why this is so useful is the property of the XOR function that `using the same encryption key on the cipher text, restores the plain text; for example, 65 XOR 42 = 107, then 107 XOR 42 = 65.`
 
 Concretely, one can take the pure text and translate each character to its corresponding ASCII code, do the same with the password characters and then XOR them. Since their lengths are not the same the key is repeated cyclically throughout the message.
