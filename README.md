@@ -17,7 +17,7 @@ Remarks:
 - In python3, one can convert a character `c` into ASCII by using the function `ord(c)`.
 - In python3, one can convert an ASCII code `n` into a character by using the function `chr(n)`.
 
-For more code details see the example: [baseline-algorithm.py](./baseline-algorithm.py)
+For more code details see the example: [baseline-algorithm.py](./src/baseline-algorithm.py)
 
 ## Breaking the password
 
@@ -25,13 +25,13 @@ But how one can actually break such a password given just the encrypted message?
 
 ### Exhaustive Method
 
-[exhaustive-method.py](./exhaustive-method.py)
+[exhaustive-method.py](./src/exhaustive-method.py)
 
-In the [project euler's instance](./encrypted-message.txt) we know that the password length is equal to 3 including only small characters, which really makes our lives easier. We could do this exhaustively by trying the `26*26*26 = 17576` possible passwords and try to find how many actual english words are found inside the text after the decryption. Thus, we decrypt the message, split the words by the space character and then try to find if each word exists in the english dictionary. To obtain a suitable set of english words we use the nltk package (`from nltk.corpus import words`).
+In the [project euler's instance](./src/data/encrypted-message.txt) we know that the password length is equal to 3 including only small characters, which really makes our lives easier. We could do this exhaustively by trying the `26*26*26 = 17576` possible passwords and try to find how many actual english words are found inside the text after the decryption. Thus, we decrypt the message, split the words by the space character and then try to find if each word exists in the english dictionary. To obtain a suitable set of english words we use the nltk package (`from nltk.corpus import words`).
 
 ### Frequency Method
 
-[character-frequency.py](./character-frequency.py)
+[character-frequency.py](./src/character-frequency.py)
 
 While the exhaustive method in this case works fast due to its limited search space, it can be really slow when the password length significantly increases. However, we can limit the search space by exploitting the fact, that some letters in the english alphabet, are more frequent than others. According to https://en.wikipedia.org/wiki/Letter_frequency the most frequent letters are `'e', 't', 'a', 'o', 'i', 'n', 's']`, but the letter `e` seems to be appearing more frequently than the rest.
 
